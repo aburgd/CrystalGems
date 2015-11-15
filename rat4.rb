@@ -1,29 +1,12 @@
 #! /usr/bin/ruby
 
+#The intent of this program is to rationalize any word to the number four, as in the length of the word,
+#length of the number of the length of the word, ... until the number is four.
+
 puts "Give me a word to rationalize! "
 word = gets.chomp
 wordLen = word.to_s.length
 
-#if wordLen == 1
-#	word = 'one'.length
-#	puts one
-#	elsif wordLen == 2
-#		word = 'two'.length
-#		puts word 
-#	elsif wordLen == 3
-#		word = 'three'.length
-#		puts word 
-#	elsif wordLen == 4
-#		word = 'four'.length
-#		puts word
-#	elsif wordLen == 5
-#		word = 'five'.length
-#		puts word
-#	elsif wordLen == 6
-#		word = 'six'.length 
-#		puts word 
-#	elsif 
-#
 word1 = 'one'.length
 word2 = 'two'.length
 word3 = 'three'.length
@@ -55,6 +38,8 @@ while wordLen != 4
 		elsif wordLen == 0 then
 				word = word0
 	else
-		puts word
+#		puts ""
 	end
 end
+
+puts word
