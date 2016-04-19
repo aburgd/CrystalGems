@@ -15,7 +15,7 @@ class Prime
   end
   
   class Diffie
-    def self.publicKey(base, $mod, aSecret)
+    def self.publicKey(base, mod, aSecret)
       # Use check_prime method as defined in Prime class for $base and $mod
       Prime.check_prime($base)
       Prime.check_prime($mod)
@@ -23,7 +23,7 @@ class Prime
       publicKey = $base ** aSecret % $mod
     end
   
-    def self.sharedSecret(publicKey, $mod, aSecret)
+    def self.sharedSecret(publicKey, mod, aSecret)
       # Do the math to find the shared secret
       sharedSecret = publicKey ** aSecret % $mod
     end
