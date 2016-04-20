@@ -7,11 +7,10 @@ class Prime
       p 'y'
       p g
     else
-      p 'n'
-      unless prime?(g)
+      while !(prime?(g))
         g = SecureRandom.random_number(100000)
+	p g
       end
-      p g
     end
   end
   
@@ -20,11 +19,10 @@ class Prime
       p 'y'
       p m
     else
-      p 'n'
       unless prime?(m)
         m = SecureRandom.random_number(100000)
+	p m
       end
-      p m
     end
   end
 end
@@ -33,7 +31,4 @@ class Tests
   p 'Testing base: '
   g = SecureRandom.random_number(100000)
   Prime.check_base(g)
-  p 'Testing modulo: '
-  m = SecureRandom.random_number(100000)
-  Prime.check_mod(m)
 end
