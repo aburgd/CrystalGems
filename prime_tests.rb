@@ -9,19 +9,19 @@ class Prime
     else
       while !(prime?(g))
         g = SecureRandom.random_number(100000)
-	p g
+	      p g
       end
     end
   end
-  
+
   def self.check_mod(m)
     if prime?(m)
       p 'y'
       p m
     else
-      unless prime?(m)
+      while !(prime?(m))
         m = SecureRandom.random_number(100000)
-	p m
+	      p m
       end
     end
   end
